@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -23,13 +25,13 @@ function App() {
           <Skills />
         </section>
 
-        {/* <section id="projects" className="min-h-screen scroll-mt-24">
+         <section id="projects" className="min-h-screen scroll-mt-24">
           <Projects />
         </section>
 
         <section id="contact" className="min-h-screen scroll-mt-24">
           <Contact />
-        </section> */}
+        </section>
 
       </main>
 
