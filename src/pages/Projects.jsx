@@ -59,10 +59,18 @@ export default function Projects() {
   key={index}
   className="bg-[#E6E6E6] text-[#12325B] rounded-2xl shadow-md transition-shadow duration-300 overflow-hidden flex flex-col "
   initial={{
-    opacity: 0,
-    y: 30,
-    x: index === 0 ? -50 : index === 1 ? 50 : 0, // first card from left, second from right
-  }}
+  opacity: 0,
+  y: 30,
+  x:
+    typeof window !== "undefined" && window.innerWidth >= 768
+      ? index === 0
+        ? -50
+        : index === 1
+        ? 50
+        : 0
+      : 0,
+}}
+
   whileInView={{ opacity: 1, y: 0, x: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.5, ease: "easeOut" }}
@@ -96,7 +104,7 @@ export default function Projects() {
               </p>
 
               {/* Buttons */}
-              <div className="flex gap-2 mt-auto flex-col sm:flex-row">
+              <div className="flex gap-2 mt-auto ">
                 <a
                   href={project.liveDemo}
                   target="_blank"

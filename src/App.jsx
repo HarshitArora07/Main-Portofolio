@@ -26,7 +26,7 @@ function App() {
       <Navbar />
 
       <main>
-
+<div className="flex flex-col w-full">
         <section id="home" className="min-h-screen scroll-mt-24">
           <Home />
         </section>
@@ -46,7 +46,7 @@ function App() {
         <section id="contact" className="min-h-screen scroll-mt-24">
           <Contact />
         </section>
-
+</div>
       </main>
 
     </div>
